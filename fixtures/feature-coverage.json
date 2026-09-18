@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "exportRevision": "unknown-fields-must-survive",
+  "build": {
+    "name": "Coverage Character",
+    "class": "Wizard",
+    "level": 8,
+    "ancestry": "Human",
+    "heritage": "Skilled Human",
+    "background": "Scholar",
+    "keyability": "int",
+    "languages": ["Common", "Draconic"],
+    "abilities": { "str": 10, "dex": 14, "con": 12, "int": 20, "wis": 14, "cha": 10 },
+    "attributes": { "ancestryhp": 8, "classhp": 6, "speed": 25 },
+    "proficiencies": { "arcana": 6, "will": 4, "castingArcane": 4, "unarmed": 2 },
+    "mods": { "Will": { "Item Bonus": 1 } },
+    "feats": [["Natural Ambition", null, "Ancestry Feat", 1, "Human Feat 1", "parentChoice", null], ["Reach Spell", null, "Class Feat", 1, "Wizard Feat 1", "childChoice", "Human Feat 1"]],
+    "specials": ["Spellbook"],
+    "lores": [["Academia", 4]],
+    "equipmentContainers": { "bag-1": { "containerName": "Backpack", "backpack": true } },
+    "equipment": [["Spellbook", 1, "bag-1", "Invested"], ["Wayfinder", 1, "Invested"]],
+    "specificProficiencies": { "trained": [], "expert": ["Staff"], "master": [], "legendary": [] },
+    "weapons": [{ "name": "Staff", "qty": 1, "prof": "simple", "die": "d4", "pot": 1, "str": "striking", "mat": null, "display": "+1 Striking Staff", "runes": ["Flaming"], "damageType": "B", "attack": 16, "damageBonus": 2, "extraDamage": ["1d6 Fire"], "increasedDice": false, "grade": "" }],
+    "armor": [{ "name": "Explorer's Clothing", "qty": 1, "prof": "unarmored", "pot": 1, "res": "resilient", "runes": [], "worn": true }, { "name": "Steel Shield", "qty": 1, "prof": "shield", "pot": 0, "res": "", "runes": ["Reinforcing (Lesser)"], "worn": true }],
+    "money": { "cp": 0, "sp": 0, "gp": 20, "pp": 0 },
+    "spellCasters": [
+      { "name": "Wizard", "magicTradition": "arcane", "spellcastingType": "prepared", "ability": "int", "proficiency": 4, "focusPoints": 1, "innate": false, "perDay": [5, 3, 3, 2, 2], "spells": [{ "spellLevel": 1, "list": ["Force Barrage"] }], "prepared": [{ "spellLevel": 1, "list": ["Force Barrage"] }, { "spellLevel": 4, "list": ["Fly"] }], "blendedSpells": [] },
+      { "name": "Sorcerer Archetype", "magicTradition": "primal", "spellcastingType": "spontaneous", "ability": "cha", "proficiency": 2, "focusPoints": 0, "innate": false, "perDay": [2, 1], "spells": [{ "spellLevel": 0, "list": ["Ignition"] }, { "spellLevel": 1, "list": ["Heal"] }], "prepared": [] },
+      { "name": "Ancestry", "magicTradition": "divine", "spellcastingType": "prepared", "ability": "cha", "proficiency": 2, "innate": true, "perDay": [1], "spells": [{ "spellLevel": 0, "list": ["Light"] }], "prepared": [] }
+    ],
+    "focusPoints": 1,
+    "focus": { "arcane": { "int": { "abilityBonus": 5, "proficiency": 4, "itemBonus": 0, "focusCantrips": ["Protective Wards"], "focusSpells": ["Hand of the Apprentice"] } } },
+    "rituals": ["Consecrate"],
+    "resistances": ["fire 4", "physical 2 (except silver)"],
+    "formula": [{ "type": "other", "known": ["Candlecap", "Ring of Sigils"], "futureFormulaField": true }],
+    "pets": [{ "name": "Wolf", "type": "animalCompanion", "futurePetField": 1 }],
+    "familiars": [{ "name": "Moth", "abilities": ["Flier"] }],
+    "inventorMods": [],
+    "acTotal": { "acProfBonus": 10, "acAbilityBonus": 2, "acItemBonus": 1, "acTotal": 23, "shieldBonus": "2" },
+    "futureBuildField": { "kept": true }
+  }
+}
