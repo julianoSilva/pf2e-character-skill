@@ -9,14 +9,15 @@ The first release focuses on import, normalization, explanation-ready data, and 
 - `skill/SKILL.md` — skill entry point
 - `skill/schema.md` — observed Pathbuilder structures and normalized model
 - `skill/normalization.md` — normalization and validation decisions
-- `src/` — parser, normalizer, and validator library
+- `skill/src/` — parser, normalizer, and validator library, packaged with the skill
+- `skill/scripts/generate_sheet.py` — dynamic semantic AcroForm generator
 - `fixtures/` — real and focused compatibility samples
 - `tests/` — Node test-runner coverage
 
 ## Use
 
 ```js
-import { parsePathbuilder, normalizeCharacter, validateCharacter } from "./src/index.js";
+import { parsePathbuilder, normalizeCharacter, validateCharacter } from "./skill/src/index.js";
 
 const parsed = parsePathbuilder(jsonText);
 const character = normalizeCharacter(parsed);
@@ -30,3 +31,11 @@ node --test
 ```
 
 The normalized result includes a deep-cloned `raw` source document. Unknown fields remain there and are also preserved on normalized records through `source`, allowing the reader to tolerate Pathbuilder additions.
+
+Generate a Paizo-inspired, fillable PDF from normalized JSON:
+
+```sh
+python skill/scripts/generate_sheet.py normalized-character.json output.pdf
+```
+
+Pages expand by content. The generator always emits core statistics, then adds advancement, inventory, spellcasting-source, companion/familiar, crafting/ritual, and overflow pages as required. All form fields use stable semantic names.

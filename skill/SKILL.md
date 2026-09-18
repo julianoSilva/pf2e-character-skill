@@ -14,6 +14,7 @@ Treat the supplied Pathbuilder export as source evidence. Preserve it unchanged,
 3. Read [schema.md](schema.md) when interpreting Pathbuilder fields or extending coverage.
 4. Read [normalization.md](normalization.md) before calculating values, validating mechanics, or editing normalized data.
 5. Run structural validation locally. For mechanical legality or current rules text, consult the current Pathfinder Second Edition Remaster entry on [Archives of Nethys](https://2e.aonprd.com/). Distinguish imported facts, independently derived values, and rules-source findings.
+6. To create a fillable character sheet, read [references/pdf-generation.md](references/pdf-generation.md), then run `scripts/generate_sheet.py` on normalized JSON.
 
 ## Constraints
 
@@ -27,6 +28,7 @@ Treat the supplied Pathbuilder export as source evidence. Preserve it unchanged,
 - Do not invent missing ritual statistics, companion mechanics, familiar abilities, or resistance exceptions.
 - Report uncertainty when an observed field is incomplete or ambiguous.
 - Do not emit Pathbuilder-compatible JSON unless compatibility has been separately tested.
+- Generated PDFs must use semantic field names, remain interactive by default, and add pages rather than silently truncating character data.
 
 ## Editing
 

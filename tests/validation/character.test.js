@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { normalizeCharacter, validateCharacter } from "../../src/index.js";
+import { normalizeCharacter, validateCharacter } from "../../skill/src/index.js";
 
 test("reports unknown proficiency encodings", () => {
   const character = normalizeCharacter({ build: { name: "Odd", proficiencies: { arcana: 3 } } });

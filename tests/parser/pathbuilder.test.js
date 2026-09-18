@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { parsePathbuilder, PathbuilderParseError } from "../../src/index.js";
+import { parsePathbuilder, PathbuilderParseError } from "../../skill/src/index.js";
 
 test("parses a real Pathbuilder export", async () => {
   const input = await readFile(new URL("../../fixtures/faeldraen.json", import.meta.url), "utf8");

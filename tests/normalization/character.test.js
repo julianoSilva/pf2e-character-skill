@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { normalizeCharacter, parsePathbuilder } from "../../src/index.js";
+import { normalizeCharacter, parsePathbuilder } from "../../skill/src/index.js";
 
 async function coverage() {
   const text = await readFile(new URL("../../fixtures/feature-coverage.json", import.meta.url), "utf8");

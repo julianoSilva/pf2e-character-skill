@@ -4,6 +4,6 @@
   "description": "Lossless Pathbuilder 2e import and normalized PF2e character data",
   "type": "module",
   "private": true,
-  "scripts": { "test": "node --test" },
+  "scripts": { "test": "node --test tests/parser tests/normalization tests/validation" },
   "engines": { "node": ">=20" }
 }
