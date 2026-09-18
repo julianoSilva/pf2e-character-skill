@@ -1,0 +1,9 @@
+{
+  "name": "pf2e-character-skill",
+  "version": "0.1.0",
+  "description": "Lossless Pathbuilder 2e import and normalized PF2e character data",
+  "type": "module",
+  "private": true,
+  "scripts": { "test": "node --test" },
+  "engines": { "node": ">=20" }
+}

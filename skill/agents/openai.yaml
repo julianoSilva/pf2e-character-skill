@@ -1,0 +1,7 @@
+interface:
+  display_name: "PF2e Character"
+  short_description: "Read and validate Pathbuilder characters"
+  default_prompt: "Use $pf2e-character to import and explain this Pathbuilder character without losing source data."
+
+policy:
+  allow_implicit_invocation: true
